@@ -1,0 +1,226 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1260 900" width="1260" height="900" font-family="Helvetica, Arial, sans-serif">
+<rect width="1260" height="900" fill="#ffffff"/>
+<text x="40" y="36" font-size="22" font-weight="bold" fill="#111827">BraiLink wiring: reference design</text>
+<text x="40" y="60" font-size="13" fill="#4b5563">Not traced from the original printer. Pin numbers are physical header pins; GPIO numbers are BCM. See wiring.md.</text>
+<rect x="40" y="140" width="230" height="690" rx="6" fill="#f9fafb" stroke="#374151" stroke-width="1.5"/>
+<text x="52" y="164" font-size="14" text-anchor="start" fill="#111827" font-weight="bold">Raspberry Pi</text>
+<text x="52" y="182" font-size="11" text-anchor="start" fill="#4b5563" font-weight="normal">40-pin GPIO header</text>
+<text x="262" y="204" font-size="11" text-anchor="end" fill="#111827" font-weight="normal">Pin 1 · 3.3 V</text>
+<circle cx="270" cy="200" r="4" fill="#fff" stroke="#d62828" stroke-width="2"/>
+<text x="262" y="234" font-size="11" text-anchor="end" fill="#111827" font-weight="normal">Pin 3 · GPIO2 (SDA)</text>
+<circle cx="270" cy="230" r="4" fill="#fff" stroke="#1d4ed8" stroke-width="2"/>
+<text x="262" y="264" font-size="11" text-anchor="end" fill="#111827" font-weight="normal">Pin 5 · GPIO3 (SCL)</text>
+<circle cx="270" cy="260" r="4" fill="#fff" stroke="#1d4ed8" stroke-width="2"/>
+<text x="262" y="304" font-size="11" text-anchor="end" fill="#111827" font-weight="normal">Pin 18 · GPIO24 (EN)</text>
+<circle cx="270" cy="300" r="4" fill="#fff" stroke="#15803d" stroke-width="2"/>
+<text x="262" y="384" font-size="11" text-anchor="end" fill="#111827" font-weight="normal">Pin 11 · GPIO17 (feed STEP)</text>
+<circle cx="270" cy="380" r="4" fill="#fff" stroke="#ea580c" stroke-width="2"/>
+<text x="262" y="404" font-size="11" text-anchor="end" fill="#111827" font-weight="normal">Pin 13 · GPIO27 (feed DIR)</text>
+<circle cx="270" cy="400" r="4" fill="#fff" stroke="#7c3aed" stroke-width="2"/>
+<text x="262" y="594" font-size="11" text-anchor="end" fill="#111827" font-weight="normal">Pin 15 · GPIO22 (head STEP)</text>
+<circle cx="270" cy="590" r="4" fill="#fff" stroke="#ea580c" stroke-width="2"/>
+<text x="262" y="614" font-size="11" text-anchor="end" fill="#111827" font-weight="normal">Pin 16 · GPIO23 (head DIR)</text>
+<circle cx="270" cy="610" r="4" fill="#fff" stroke="#7c3aed" stroke-width="2"/>
+<text x="262" y="794" font-size="11" text-anchor="end" fill="#111827" font-weight="normal">Pin 22 · GPIO25 (home switch)</text>
+<circle cx="270" cy="790" r="4" fill="#fff" stroke="#0e7490" stroke-width="2"/>
+<text x="155" y="820" font-size="11" text-anchor="middle" fill="#111827" font-weight="normal">Pin 6 · GND</text>
+<polyline points="155,830 155,840" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+<line x1="146" y1="840" x2="164" y2="840" stroke="#111827" stroke-width="2"/>
+<line x1="149" y1="844" x2="161" y2="844" stroke="#111827" stroke-width="2"/>
+<line x1="152" y1="848" x2="158" y2="848" stroke="#111827" stroke-width="2"/>
+<rect x="420" y="76" width="200" height="40" rx="6" fill="#f9fafb" stroke="#374151" stroke-width="1.5"/>
+<text x="520" y="100" font-size="12" text-anchor="middle" fill="#111827" font-weight="bold">5–6 V servo supply</text>
+<polyline points="520,116 520,140" fill="none" stroke="#d62828" stroke-width="2.5" stroke-linejoin="round"/>
+<text x="528" y="134" font-size="11" text-anchor="start" fill="#d62828" font-weight="normal">V+</text>
+<polyline points="612,116 612,126" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+<line x1="603" y1="126" x2="621" y2="126" stroke="#111827" stroke-width="2"/>
+<line x1="606" y1="130" x2="618" y2="130" stroke="#111827" stroke-width="2"/>
+<line x1="609" y1="134" x2="615" y2="134" stroke="#111827" stroke-width="2"/>
+<rect x="420" y="140" width="200" height="190" rx="6" fill="#f9fafb" stroke="#374151" stroke-width="1.5"/>
+<text x="432" y="162" font-size="14" font-weight="bold" fill="#111827">PCA9685</text>
+<text x="432" y="179" font-size="11" fill="#4b5563">16-ch servo driver · I²C 0x40</text>
+<text x="430" y="204" font-size="11" text-anchor="start" fill="#111827" font-weight="normal">VCC</text>
+<text x="430" y="234" font-size="11" text-anchor="start" fill="#111827" font-weight="normal">SDA</text>
+<text x="430" y="264" font-size="11" text-anchor="start" fill="#111827" font-weight="normal">SCL</text>
+<text x="430" y="304" font-size="11" text-anchor="start" fill="#111827" font-weight="normal">GND</text>
+<polyline points="440,330 440,340" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+<line x1="431" y1="340" x2="449" y2="340" stroke="#111827" stroke-width="2"/>
+<line x1="434" y1="344" x2="446" y2="344" stroke="#111827" stroke-width="2"/>
+<line x1="437" y1="348" x2="443" y2="348" stroke="#111827" stroke-width="2"/>
+<polyline points="270,200 420,200" fill="none" stroke="#d62828" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="270,230 420,230" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="270,260 420,260" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linejoin="round"/>
+<text x="612" y="169" font-size="10" text-anchor="end" fill="#4b5563" font-weight="normal">CH0</text>
+<polyline points="620,165 720,165" fill="none" stroke="#6b7280" stroke-width="2" stroke-linejoin="round"/>
+<rect x="720" y="153" width="150" height="24" rx="4" fill="#fff" stroke="#374151"/>
+<text x="795" y="169" font-size="12" text-anchor="middle" fill="#111827" font-weight="normal">Servo · dot 1</text>
+<text x="612" y="199" font-size="10" text-anchor="end" fill="#4b5563" font-weight="normal">CH1</text>
+<polyline points="620,195 720,195" fill="none" stroke="#6b7280" stroke-width="2" stroke-linejoin="round"/>
+<rect x="720" y="183" width="150" height="24" rx="4" fill="#fff" stroke="#374151"/>
+<text x="795" y="199" font-size="12" text-anchor="middle" fill="#111827" font-weight="normal">Servo · dot 2</text>
+<text x="612" y="229" font-size="10" text-anchor="end" fill="#4b5563" font-weight="normal">CH2</text>
+<polyline points="620,225 720,225" fill="none" stroke="#6b7280" stroke-width="2" stroke-linejoin="round"/>
+<rect x="720" y="213" width="150" height="24" rx="4" fill="#fff" stroke="#374151"/>
+<text x="795" y="229" font-size="12" text-anchor="middle" fill="#111827" font-weight="normal">Servo · dot 3</text>
+<text x="612" y="259" font-size="10" text-anchor="end" fill="#4b5563" font-weight="normal">CH3</text>
+<polyline points="620,255 720,255" fill="none" stroke="#6b7280" stroke-width="2" stroke-linejoin="round"/>
+<rect x="720" y="243" width="150" height="24" rx="4" fill="#fff" stroke="#374151"/>
+<text x="795" y="259" font-size="12" text-anchor="middle" fill="#111827" font-weight="normal">Servo · dot 4</text>
+<text x="612" y="289" font-size="10" text-anchor="end" fill="#4b5563" font-weight="normal">CH4</text>
+<polyline points="620,285 720,285" fill="none" stroke="#6b7280" stroke-width="2" stroke-linejoin="round"/>
+<rect x="720" y="273" width="150" height="24" rx="4" fill="#fff" stroke="#374151"/>
+<text x="795" y="289" font-size="12" text-anchor="middle" fill="#111827" font-weight="normal">Servo · dot 5</text>
+<text x="612" y="319" font-size="10" text-anchor="end" fill="#4b5563" font-weight="normal">CH5</text>
+<polyline points="620,315 720,315" fill="none" stroke="#6b7280" stroke-width="2" stroke-linejoin="round"/>
+<rect x="720" y="303" width="150" height="24" rx="4" fill="#fff" stroke="#374151"/>
+<text x="795" y="319" font-size="12" text-anchor="middle" fill="#111827" font-weight="normal">Servo · dot 6</text>
+<rect x="920" y="150" width="150" height="170" rx="6" fill="#f9fafb" stroke="#374151" stroke-width="1.5"/>
+<text x="932" y="172" font-size="14" font-weight="bold" fill="#111827">Punch head</text>
+<text x="932" y="189" font-size="11" fill="#4b5563">dot positions</text>
+<circle cx="970" cy="210" r="13" fill="#fff" stroke="#374151" stroke-width="1.5"/>
+<text x="970" y="214" font-size="12" text-anchor="middle" fill="#111827" font-weight="bold">1</text>
+<circle cx="970" cy="246" r="13" fill="#fff" stroke="#374151" stroke-width="1.5"/>
+<text x="970" y="250" font-size="12" text-anchor="middle" fill="#111827" font-weight="bold">2</text>
+<circle cx="970" cy="282" r="13" fill="#fff" stroke="#374151" stroke-width="1.5"/>
+<text x="970" y="286" font-size="12" text-anchor="middle" fill="#111827" font-weight="bold">3</text>
+<circle cx="1020" cy="210" r="13" fill="#fff" stroke="#374151" stroke-width="1.5"/>
+<text x="1020" y="214" font-size="12" text-anchor="middle" fill="#111827" font-weight="bold">4</text>
+<circle cx="1020" cy="246" r="13" fill="#fff" stroke="#374151" stroke-width="1.5"/>
+<text x="1020" y="250" font-size="12" text-anchor="middle" fill="#111827" font-weight="bold">5</text>
+<circle cx="1020" cy="282" r="13" fill="#fff" stroke="#374151" stroke-width="1.5"/>
+<text x="1020" y="286" font-size="12" text-anchor="middle" fill="#111827" font-weight="bold">6</text>
+<rect x="420" y="360" width="200" height="80" rx="6" fill="#f9fafb" stroke="#374151" stroke-width="1.5"/>
+<text x="520" y="430" font-size="11" text-anchor="middle" fill="#111827" font-weight="bold">Driver 1 · paper feed L</text>
+<text x="430" y="384" font-size="10" text-anchor="start" fill="#111827" font-weight="normal">STEP</text>
+<text x="430" y="404" font-size="10" text-anchor="start" fill="#111827" font-weight="normal">DIR</text>
+<text x="470" y="384" font-size="10" text-anchor="start" fill="#4b5563" font-weight="normal">A4988 / DRV8825</text>
+<text x="470" y="404" font-size="10" text-anchor="start" fill="#4b5563" font-weight="normal">VDD 3.3 V · GND</text>
+<text x="430" y="424" font-size="10" text-anchor="start" fill="#111827" font-weight="normal">EN</text>
+<text x="612" y="376" font-size="10" text-anchor="end" fill="#d62828" font-weight="normal">VMOT</text>
+<polyline points="620,410 714,410" fill="none" stroke="#6b7280" stroke-width="3" stroke-linejoin="round"/>
+<text x="667" y="406" font-size="10" text-anchor="middle" fill="#4b5563" font-weight="normal">4 wires</text>
+<circle cx="740" cy="410" r="26" fill="#fff" stroke="#374151" stroke-width="1.5"/>
+<text x="740" y="414" font-size="14" text-anchor="middle" fill="#111827" font-weight="bold">M</text>
+<text x="780" y="410" font-size="12" text-anchor="start" fill="#111827" font-weight="bold">NEMA 17 stepper</text>
+<text x="780" y="428" font-size="11" text-anchor="start" fill="#4b5563" font-weight="normal">Paper feed (left)</text>
+<rect x="420" y="460" width="200" height="80" rx="6" fill="#f9fafb" stroke="#374151" stroke-width="1.5"/>
+<text x="520" y="530" font-size="11" text-anchor="middle" fill="#111827" font-weight="bold">Driver 2 · paper feed R</text>
+<text x="430" y="484" font-size="10" text-anchor="start" fill="#111827" font-weight="normal">STEP</text>
+<text x="430" y="504" font-size="10" text-anchor="start" fill="#111827" font-weight="normal">DIR</text>
+<text x="470" y="484" font-size="10" text-anchor="start" fill="#4b5563" font-weight="normal">A4988 / DRV8825</text>
+<text x="470" y="504" font-size="10" text-anchor="start" fill="#4b5563" font-weight="normal">VDD 3.3 V · GND</text>
+<text x="430" y="524" font-size="10" text-anchor="start" fill="#111827" font-weight="normal">EN</text>
+<text x="612" y="476" font-size="10" text-anchor="end" fill="#d62828" font-weight="normal">VMOT</text>
+<polyline points="620,510 714,510" fill="none" stroke="#6b7280" stroke-width="3" stroke-linejoin="round"/>
+<text x="667" y="506" font-size="10" text-anchor="middle" fill="#4b5563" font-weight="normal">4 wires</text>
+<circle cx="740" cy="510" r="26" fill="#fff" stroke="#374151" stroke-width="1.5"/>
+<text x="740" y="514" font-size="14" text-anchor="middle" fill="#111827" font-weight="bold">M</text>
+<text x="780" y="510" font-size="12" text-anchor="start" fill="#111827" font-weight="bold">NEMA 17 stepper</text>
+<text x="780" y="528" font-size="11" text-anchor="start" fill="#4b5563" font-weight="normal">Paper feed (right)</text>
+<rect x="420" y="570" width="200" height="80" rx="6" fill="#f9fafb" stroke="#374151" stroke-width="1.5"/>
+<text x="520" y="640" font-size="11" text-anchor="middle" fill="#111827" font-weight="bold">Driver 3 · head screw L</text>
+<text x="430" y="594" font-size="10" text-anchor="start" fill="#111827" font-weight="normal">STEP</text>
+<text x="430" y="614" font-size="10" text-anchor="start" fill="#111827" font-weight="normal">DIR</text>
+<text x="470" y="594" font-size="10" text-anchor="start" fill="#4b5563" font-weight="normal">A4988 / DRV8825</text>
+<text x="470" y="614" font-size="10" text-anchor="start" fill="#4b5563" font-weight="normal">VDD 3.3 V · GND</text>
+<text x="430" y="634" font-size="10" text-anchor="start" fill="#111827" font-weight="normal">EN</text>
+<text x="612" y="586" font-size="10" text-anchor="end" fill="#d62828" font-weight="normal">VMOT</text>
+<polyline points="620,620 714,620" fill="none" stroke="#6b7280" stroke-width="3" stroke-linejoin="round"/>
+<text x="667" y="616" font-size="10" text-anchor="middle" fill="#4b5563" font-weight="normal">4 wires</text>
+<circle cx="740" cy="620" r="26" fill="#fff" stroke="#374151" stroke-width="1.5"/>
+<text x="740" y="624" font-size="14" text-anchor="middle" fill="#111827" font-weight="bold">M</text>
+<text x="780" y="620" font-size="12" text-anchor="start" fill="#111827" font-weight="bold">NEMA 17 stepper</text>
+<text x="780" y="638" font-size="11" text-anchor="start" fill="#4b5563" font-weight="normal">Lead screw (left)</text>
+<rect x="420" y="670" width="200" height="80" rx="6" fill="#f9fafb" stroke="#374151" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="520" y="740" font-size="11" text-anchor="middle" fill="#111827" font-weight="bold">Driver 4 · head screw R</text>
+<text x="430" y="694" font-size="10" text-anchor="start" fill="#111827" font-weight="normal">STEP</text>
+<text x="430" y="714" font-size="10" text-anchor="start" fill="#111827" font-weight="normal">DIR</text>
+<text x="470" y="694" font-size="10" text-anchor="start" fill="#4b5563" font-weight="normal">A4988 / DRV8825</text>
+<text x="470" y="714" font-size="10" text-anchor="start" fill="#4b5563" font-weight="normal">VDD 3.3 V · GND</text>
+<text x="430" y="734" font-size="10" text-anchor="start" fill="#111827" font-weight="normal">EN</text>
+<text x="612" y="686" font-size="10" text-anchor="end" fill="#d62828" font-weight="normal">VMOT</text>
+<polyline points="620,720 714,720" fill="none" stroke="#6b7280" stroke-width="3" stroke-linejoin="round"/>
+<text x="667" y="716" font-size="10" text-anchor="middle" fill="#4b5563" font-weight="normal">4 wires</text>
+<circle cx="740" cy="720" r="26" fill="#fff" stroke="#374151" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="740" y="724" font-size="14" text-anchor="middle" fill="#111827" font-weight="bold">M</text>
+<text x="780" y="720" font-size="12" text-anchor="start" fill="#111827" font-weight="bold">NEMA 17 stepper</text>
+<text x="780" y="738" font-size="11" text-anchor="start" fill="#4b5563" font-weight="normal">Lead screw (right) · optional</text>
+<polyline points="270,380 340,380" fill="none" stroke="#ea580c" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="340,380 340,480" fill="none" stroke="#ea580c" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="340,380 420,380" fill="none" stroke="#ea580c" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="340,480 420,480" fill="none" stroke="#ea580c" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="340" cy="480" r="3.5" fill="#ea580c"/>
+<circle cx="340" cy="380" r="3.5" fill="#ea580c"/>
+<polyline points="270,400 360,400" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="360,400 360,500" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="360,400 420,400" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="360,500 420,500" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="360" cy="500" r="3.5" fill="#7c3aed"/>
+<circle cx="360" cy="400" r="3.5" fill="#7c3aed"/>
+<polyline points="270,590 340,590" fill="none" stroke="#ea580c" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="340,590 340,690" fill="none" stroke="#ea580c" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="340,590 420,590" fill="none" stroke="#ea580c" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="340,690 420,690" fill="none" stroke="#ea580c" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="340" cy="690" r="3.5" fill="#ea580c"/>
+<circle cx="340" cy="590" r="3.5" fill="#ea580c"/>
+<polyline points="270,610 360,610" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="360,610 360,710" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="360,610 420,610" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="360,710 420,710" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="360" cy="710" r="3.5" fill="#7c3aed"/>
+<circle cx="360" cy="610" r="3.5" fill="#7c3aed"/>
+<polyline points="270,300 300,300 300,730" fill="none" stroke="#15803d" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="300,420 420,420" fill="none" stroke="#15803d" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="300" cy="420" r="3.5" fill="#15803d"/>
+<polyline points="300,520 420,520" fill="none" stroke="#15803d" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="300" cy="520" r="3.5" fill="#15803d"/>
+<polyline points="300,630 420,630" fill="none" stroke="#15803d" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="300" cy="630" r="3.5" fill="#15803d"/>
+<polyline points="300,730 420,730" fill="none" stroke="#15803d" stroke-width="2" stroke-linejoin="round"/>
+<rect x="1000" y="380" width="230" height="44" rx="6" fill="#f9fafb" stroke="#374151" stroke-width="1.5"/>
+<text x="1115" y="406" font-size="12" text-anchor="middle" fill="#111827" font-weight="bold">12 V stepper supply</text>
+<polyline points="960,372 960,682" fill="none" stroke="#d62828" stroke-width="2.5" stroke-linejoin="round"/>
+<polyline points="1000,400 960,400" fill="none" stroke="#d62828" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="960" cy="400" r="3.5" fill="#d62828"/>
+<polyline points="960,372 620,372" fill="none" stroke="#d62828" stroke-width="2.5" stroke-linejoin="round"/>
+<polyline points="960,472 620,472" fill="none" stroke="#d62828" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="960" cy="472" r="3.5" fill="#d62828"/>
+<polyline points="960,582 620,582" fill="none" stroke="#d62828" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="960" cy="582" r="3.5" fill="#d62828"/>
+<polyline points="960,682 620,682" fill="none" stroke="#d62828" stroke-width="2.5" stroke-linejoin="round"/>
+<polyline points="1115,424 1115,434" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+<line x1="1106" y1="434" x2="1124" y2="434" stroke="#111827" stroke-width="2"/>
+<line x1="1109" y1="438" x2="1121" y2="438" stroke="#111827" stroke-width="2"/>
+<line x1="1112" y1="442" x2="1118" y2="442" stroke="#111827" stroke-width="2"/>
+<rect x="420" y="770" width="200" height="40" rx="6" fill="#f9fafb" stroke="#374151" stroke-width="1.5"/>
+<text x="520" y="788" font-size="12" text-anchor="middle" fill="#111827" font-weight="bold">Home limit switch</text>
+<text x="520" y="804" font-size="10" text-anchor="middle" fill="#4b5563" font-weight="normal">punch head, normally open</text>
+<polyline points="270,790 420,790" fill="none" stroke="#0e7490" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="620,790 640,790" fill="none" stroke="#0e7490" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="640,790 640,800" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+<line x1="631" y1="800" x2="649" y2="800" stroke="#111827" stroke-width="2"/>
+<line x1="634" y1="804" x2="646" y2="804" stroke="#111827" stroke-width="2"/>
+<line x1="637" y1="808" x2="643" y2="808" stroke="#111827" stroke-width="2"/>
+<text x="760" y="784" font-size="12" text-anchor="start" fill="#111827" font-weight="bold">Legend</text>
+<polyline points="760,802 784,802" fill="none" stroke="#d62828" stroke-width="3" stroke-linejoin="round"/>
+<text x="790" y="806" font-size="11" text-anchor="start" fill="#111827" font-weight="normal">Power</text>
+<polyline points="880,802 904,802" fill="none" stroke="#1d4ed8" stroke-width="3" stroke-linejoin="round"/>
+<text x="910" y="806" font-size="11" text-anchor="start" fill="#111827" font-weight="normal">I²C</text>
+<polyline points="1000,802 1024,802" fill="none" stroke="#ea580c" stroke-width="3" stroke-linejoin="round"/>
+<text x="1030" y="806" font-size="11" text-anchor="start" fill="#111827" font-weight="normal">STEP</text>
+<polyline points="1120,802 1144,802" fill="none" stroke="#7c3aed" stroke-width="3" stroke-linejoin="round"/>
+<text x="1150" y="806" font-size="11" text-anchor="start" fill="#111827" font-weight="normal">DIR</text>
+<polyline points="760,824 784,824" fill="none" stroke="#15803d" stroke-width="3" stroke-linejoin="round"/>
+<text x="790" y="828" font-size="11" text-anchor="start" fill="#111827" font-weight="normal">Enable</text>
+<polyline points="880,824 904,824" fill="none" stroke="#0e7490" stroke-width="3" stroke-linejoin="round"/>
+<text x="910" y="828" font-size="11" text-anchor="start" fill="#111827" font-weight="normal">Switch</text>
+<polyline points="1000,824 1024,824" fill="none" stroke="#6b7280" stroke-width="3" stroke-linejoin="round"/>
+<text x="1030" y="828" font-size="11" text-anchor="start" fill="#111827" font-weight="normal">Motor / servo</text>
+<polyline points="1126,814 1126,824" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+<line x1="1117" y1="824" x2="1135" y2="824" stroke="#111827" stroke-width="2"/>
+<line x1="1120" y1="828" x2="1132" y2="828" stroke="#111827" stroke-width="2"/>
+<line x1="1123" y1="832" x2="1129" y2="832" stroke="#111827" stroke-width="2"/>
+<text x="1140" y="832" font-size="11" text-anchor="start" fill="#111827" font-weight="normal">= common ground</text>
+<text x="760" y="886" font-size="11" text-anchor="start" fill="#4b5563" font-weight="normal">Dashed = optional: a bearing can support that end of the lead screw instead.</text>
+<text x="760" y="868" font-size="11" text-anchor="start" fill="#4b5563" font-weight="normal">All grounds connect: Pi, PCA9685, drivers, both supplies. Never power servos or motors from the Pi.</text>
+</svg>

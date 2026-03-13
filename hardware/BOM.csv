@@ -1,0 +1,23 @@
+Part,Qty,Description,Supplier,Link,Unit price (USD),Notes
+3D-printed parts,61,"Frame, punch head, dies, gears, racks and paper advance parts",,cad/stl/README.md,,22 STL files; the print list gives each quantity
+MG995 servo,6,One per braille dot; each drives a punch through a printed gear and rack,,,,
+NEMA 17 pancake stepper motor,2,Drive the friction wheels that advance the paper,,,,
+NEMA 17 pancake stepper motor,1,Turns the lead screw that moves the punch head sideways,,,,
+NEMA 17 pancake stepper motor or bearing,1,Supports the other end of the lead screw,,,,Your choice: a second motor drives the screw from both ends; a bearing is cheaper and simpler
+Lead screw,1,Moves the punch head sideways,,,,"8 mm diameter, 8 mm lead, 308.8 mm long"
+Lead screw nut (brass),2,One at each end of the punch head,,,,"Must match the lead screw (8 mm diameter, 8 mm lead)"
+Flexible shaft coupler,2,Connect the lead screw motors' shafts to the lead screw,,,,5 mm (motor shaft) to 8 mm (lead screw); only 1 if you use a bearing instead of the second motor
+Linear rail with carriage,2,Guide the punch head,McMaster-Carr,,,250 x 7.6 mm
+Flanged ball bearing,2,Support the paper advance shafts,McMaster-Carr,https://www.mcmaster.com/57155K577,,McMaster part 57155K577
+Rubber O-ring,2,Stretch over the friction wheels to grip the paper,,,,20-24 mm inside diameter depending on print tolerances; the wheels are 25.6 mm across
+Steel rod,1,"Locks the die blocks in the base; 5/64 in (2 mm) diameter, cut to 245 mm",,,,Modeled in the CAD as a 245 mm rod (top-level Part 1)
+Screws,8,"Attach the two rail carriages to the punch head, 4 per carriage",McMaster-Carr,,,Come with the McMaster rail set; size depends on the carriage
+Double-sided tape,,Holds the servos in the punch head,,,,
+Heat-shrink tubing,,Tidies wire joints and bundles,,,,
+Metal servo gear (optional),6,"Replaces the printed 15-tooth gears, which can slip over time",,,,Must fit the MG995 output spline
+Raspberry Pi,1,Runs the print scripts in pi/,,,,Any model with the 40-pin header
+PCA9685 16-channel servo driver,1,Drives the six servos over I2C,,,,Reference wiring; see electronics/wiring.md
+Stepper driver (A4988 or DRV8825),4,One per stepper motor,,,,Reference wiring; only 3 if you use a bearing
+5-6 V power supply,1,Powers the servos,,,,Reference wiring; allow 1-2 A per servo
+12 V power supply,1,Powers the stepper motors,,,,Reference wiring
+Home limit switch,1,Tells the Pi when the punch head is at its start position,,,,Reference wiring; not in the CAD
