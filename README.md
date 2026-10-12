@@ -1,6 +1,6 @@
 # BraiLink: open source braille printer
 
-![The BraiLink braille printer: a 3D-printed punch head on a lead screw and rails, with the electronics in a black box beside it](docs/images/Screenshot 2026-10-12 at 1.12.12 AM.png)
+![The BraiLink braille printer: a 3D-printed punch head on a lead screw and rails, with the electronics in a black box beside it](docs/images/Screenshot.png)
 
 A comprehensive web application that converts text to Braille and sends it to a physical Braille printer via Raspberry Pi. The system includes OCR capabilities for handwritten text recognition, voice transcription, and real-time Braille preview.
 
