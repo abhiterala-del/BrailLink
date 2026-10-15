@@ -133,6 +133,16 @@ DOT_TO_CHANNEL = {1: 0, 2: 1, 3: 2, 4: 3, 5: 4, 6: 5}
 # set this to True.
 MIRROR = False
 
+# --- Speed mode -----------------------------------------------------------
+
+# CALIBRATE: max speed mode. False homes the head before every line, which
+# fixes any steps the head motor skipped but spends about a third of each line
+# travelling back. True homes once per page and starts each line from whichever
+# end the head is already at, so every other line prints right to left. Turn it
+# on only once the head moves reliably: skipped steps then carry over to every
+# following line on the page.
+BIDIRECTIONAL = False
+
 # ===========================================================================
 # Wiring (BCM GPIO numbers), matching hardware/electronics/wiring.md.
 # Change these only if your wiring differs.
@@ -345,18 +355,29 @@ def cells_to_punch(line):
     return sorted(cells, key=lambda cell: cell[0])
 
 
+def cell_mm(position):
+    return HOME_TO_FIRST_CELL_MM + position * CELL_PITCH_MM
+
+
 def print_job(job, hw):
     hw.rest_servos()
     hw.enable(True)
     hw.feed(TOP_MARGIN_MM)
+    head_mm = None  # unknown until homed
     for number, line in enumerate(job, start=1):
         print(f"line {number}/{len(job)}", flush=True)
         cells = cells_to_punch(line)
         if cells:
-            # Homing every line corrects any steps the head motor skipped.
-            hw.home_head()
+            if BIDIRECTIONAL and head_mm is not None:
+                # Start from the end of the line nearest the head.
+                if abs(head_mm - cell_mm(cells[-1][0])) < abs(head_mm - cell_mm(cells[0][0])):
+                    cells.reverse()
+            else:
+                # Homing every line corrects any steps the head motor skipped.
+                hw.home_head()
             for position, dots in cells:
-                hw.move_head_to(HOME_TO_FIRST_CELL_MM + position * CELL_PITCH_MM)
+                head_mm = cell_mm(position)
+                hw.move_head_to(head_mm)
                 hw.punch(dots)
         hw.feed(LINE_PITCH_MM)
     hw.feed(EJECT_MM)

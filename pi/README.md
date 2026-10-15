@@ -52,6 +52,7 @@ Every value that depends on your build is in the **CALIBRATION** block at the to
 | 13. Line spacing and margins | test print | `LINE_PITCH_MM`, `TOP_MARGIN_MM`, `EJECT_MM` | 10, 0, 0 mm | Lines are evenly spaced, about 10 mm apart in standard braille. |
 | 14. Speed | any move | `STEP_SECONDS`, `FEED_MICROSTEPS` | 0.002 s, 1 | Raise `STEP_SECONDS` if a motor stalls or skips. Microstepping makes the feed finer but every move slower. |
 | 15. Reading side | print the letter "b" | `MIRROR` | `False` | Read it from the raised side: the two dots should be in the **left** column. If they're on the right, set `True`. |
+| 16. Max speed mode (optional) | full-page test print | `BIDIRECTIONAL` | `False` | Once the head moves reliably, set `True`: the head homes once per page and prints every other line right to left, about a third faster. If dots drift out of line further down the page, the head is skipping steps; set it back to `False` or raise `STEP_SECONDS`. |
 
 Before printing for real, check what a job will do with `--dry-run`:
 
